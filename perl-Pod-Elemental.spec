@@ -1,5 +1,5 @@
 %define upstream_name    Pod-Elemental
-%define upstream_version 0.093280
+%define upstream_version 0.100220
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -23,6 +23,7 @@ BuildRequires: perl(Sub::Exporter::ForMethods)
 BuildRequires: perl(Test::Deep)
 BuildRequires: perl(Test::Differences)
 BuildRequires: perl(namespace::autoclean)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -34,11 +35,10 @@ This is a test. How many times do I need to tell you that?
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
@@ -52,5 +52,3 @@ rm -rf %buildroot
 %doc Changes LICENSE README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
