@@ -1,15 +1,15 @@
 %define upstream_name    Pod-Elemental
-%define upstream_version 0.102362
+%define upstream_version 0.102363
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.102362
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	A Pod =command element
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Pod/Pod-Elemental-0.102362.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Pod/Pod-Elemental-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Encode)
@@ -77,4 +77,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Fri Nov 06 2009 cpan2dist 0.093000-1mdv
 - initial mdv release, generated with cpan2dist
+
 
