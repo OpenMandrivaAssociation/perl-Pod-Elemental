@@ -1,5 +1,5 @@
 %define upstream_name    Pod-Elemental
-%define upstream_version 0.102363
+%define upstream_version 0.103000
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -77,5 +77,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Fri Nov 06 2009 cpan2dist 0.093000-1mdv
 - initial mdv release, generated with cpan2dist
+
 
 
